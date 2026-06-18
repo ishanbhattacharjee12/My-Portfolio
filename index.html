@@ -1,215 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishan Bhattacharjee - Machine Learning Engineer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Ishan Bhattacharjee | AI & Machine Learning Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <nav>
+    <!-- Background Elements for glassmorphism / gradient depth -->
+    <div class="bg-gradient-1"></div>
+    <div class="bg-gradient-2"></div>
+
+    <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Ishan Bhattacharjee</div>
+            <a href="#home" class="logo">Ishan<span>.AI</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Ishan Bhattacharjee</h1>
-            <p class="subtitle">Machine Learning Engineer | Data Analytics | Deep Learning</p>
-            <a href="#about" class="cta-button">Explore My Work</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title fade-in">About Me</h2>
-        <div class="about-content fade-in">
-            <p>I am a problem solver with a strong foundation in Data Structures and Algorithms, and a growing focus on Machine Learning and Deep Learning. I actively build and experiment with models in areas like Computer Vision and Natural Language Processing using PyTorch.</p>
-            <p>My work combines data analytics, predictive modeling, and intelligent systems to solve real-world problems. I have hands-on experience with data pipelines, model training, and visualization. Currently pursuing B.Tech in Computer Science (IoT) at VIT Vellore with a CGPA of 8.24/10.</p>
-            <div class="contact-info">
-                <a href="tel:7004211716" class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>7004211716</span>
-                </a>
-                <a href="mailto:ishanbhattacharjee19@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>ishanbhattacharjee19@gmail.com</span>
-                </a>
-                <a href="https://linkedin.com/in/ishanbhattacharjee12" class="contact-item" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <span>Ishan Bhattacharjee</span>
-                </a>
-                <a href="https://github.com/ishanbhattacharjee12?tab=repositories" class="contact-item" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <span>ishanbhattacharjee12</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2 class="section-title fade-in">Education</h2>
-        <div class="education-item fade-in">
-            <h3>Bachelor of Technology in Computer Science (IoT Specialization)</h3>
-            <p><strong>Vellore Institute of Technology, Vellore</strong> | Sept. 2022 – Present</p>
-            <p>CGPA: 8.24/10</p>
-        </div>
-        <div class="education-item fade-in">
-            <h3>Class XII</h3>
-            <p><strong>D.B.M.S. English School, Jamshedpur</strong> | 2020 – 2022</p>
-            <p>Grade: 92.5%</p>
-        </div>
-        <div class="education-item fade-in">
-            <h3>Class X</h3>
-            <p><strong>D.B.M.S. English School, Jamshedpur</strong> | 2008 – 2020</p>
-            <p>Grade: 95.6%</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title fade-in">Technical Skills</h2>
-        <div class="skills-grid">
-
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">SQL</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content fade-up">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">Ishan Bhattacharjee</h1>
+                <h2 class="role">AI & Machine Learning Engineer</h2>
+                <p class="summary">
+                    Computer Science student specializing in building end-to-end AI applications, scalable data pipelines, and production-ready machine learning solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="mailto:ishanbhattacharjee19@gmail.com" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/ishanbhattacharjee12" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ishan-bhattacharjee" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:ishanbhattacharjee19@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-layer-group"></i> Frameworks & Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Scikit-learn</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Tableau</span>
-                    <span class="skill-tag">ReactJS</span>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <h2 class="section-title fade-up">About Me</h2>
+                <div class="about-grid fade-up">
+                    <div class="about-text">
+                        <p>I am a highly motivated Computer Science student at VIT Vellore, specializing in IoT and focusing deeply on <strong>Machine Learning</strong> and <strong>Software Development</strong>. My passion lies in taking complex data and turning it into intelligent, scalable solutions.</p>
+                        <p>I have hands-on experience building full-stack AI applications integrating <strong>LLMs, vector search, and REST APIs</strong>. From developing real-time data synchronization dashboards to production-ready Retrieval-Augmented Generation (RAG) pipelines, I am driven by the impact of data-centric engineering.</p>
+                        <p>Currently seeking roles in Software Development, AI/ML, Data Engineering, or Data Analytics where I can contribute to innovative, end-to-end solutions.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Production AI</h3>
+                            <p>End-to-End Apps</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-database"></i>
+                            <h3>Data Pipelines</h3>
+                            <p>Scalable Workflows</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-brain"></i> AI & Data Concepts</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">Natural Language Processing</span>
-                    <span class="skill-tag">Predictive Modeling</span>
-                    <span class="skill-tag">Data Analytics</span>
-                    <span class="skill-tag">ETL Pipelines</span>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <h2 class="section-title fade-up">Technical Skills</h2>
+                <div class="skills-grid fade-up">
+                    
+                    <div class="skill-category glass-card">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>AI & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Vector Search</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Vite</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming & Core</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">DBMS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Data & Cloud Deployment</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Vercel</span>
+                            <span class="skill-tag">Render</span>
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">ETL Pipelines</span>
+                            <span class="skill-tag">Tableau</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title fade-in">Experience</h2>
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">Vocational Training Intern</div>
-                    <div><strong>TATA STEEL Ltd., Jamshedpur</strong></div>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-container">
+                <h2 class="section-title fade-up">Experience</h2>
+                <div class="timeline fade-up">
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Vocational Training Intern</h3>
+                                    <h4 class="company-name"><i class="fas fa-building"></i> TATA STEEL Ltd. | Jamshedpur, India</h4>
+                                </div>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> May 2024 – Jul 2024</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Developed and deployed a <strong>data-driven Privacy Consent Dashboard</strong> using <strong>React.js and REST APIs</strong>, enabling real-time data synchronization.</li>
+                                <li>Improved latency by <strong>60%</strong> for 500+ users, ensuring efficient handling of user data for analytics workflows.</li>
+                                <li>Built and optimized backend API workflows for <strong>data collection, processing, and integration</strong>, supporting scalable data pipelines for downstream data analytics and ML insights.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="experience-date">May 2024 – July 2024</div>
             </div>
-            <ul>
-                <li>Developed and deployed a <strong>data-driven Privacy Consent Dashboard</strong> using <strong>React.js and REST APIs</strong>, enabling real-time data synchronization and improving latency by <strong>60%</strong> for 500+ users.</li>
+        </section>
 
-                <li>Built and optimized backend workflows for <strong>data collection, processing, and integration</strong>, supporting <strong>scalable data pipelines</strong> and enabling downstream use cases in <strong>data analytics</strong> and <strong>machine learning-driven insights</strong>.</li>
-            </ul>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <h2 class="section-title fade-up">Featured Projects</h2>
+                <div class="projects-grid fade-up">
+
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/ishanbhattacharjee12/Verity-Enterprise-RAG-Pipeline" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://verity-rag-pipeline-project.vercel.app" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://verity-rag-pipeline-project.onrender.com/docs" target="_blank" aria-label="API Docs"><i class="fas fa-book"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Verity: Enterprise RAG Pipeline</h3>
+                        <div class="project-description">
+                            <p>A production-ready Retrieval-Augmented Generation (RAG) system for accurate question answering across enterprise knowledge bases using hybrid retrieval, LLM-powered reranking, and citation verification.</p>
+                            <ul>
+                                <li>Confidence-based response scoring and hallucination resistance.</li>
+                                <li>End-to-end AI platform with document ingestion and vector indexing.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span>React.js</span>
+                            <span>FastAPI</span>
+                            <span>OpenAI API</span>
+                            <span>Vector Search</span>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/ishanbhattacharjee12/AI-YouTube-Summarizer" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI YouTube Summarizer</h3>
+                        <div class="project-description">
+                            <p>A full-stack AI-powered summarizer that generates structured summaries with key takeaways, timestamp navigation, and note-ready insights from YouTube transcripts.</p>
+                            <ul>
+                                <li>Engineered with transcript caching, CORS configuration, and resilient fallback mechanisms.</li>
+                                <li>Cloud architecture with environment-based secrets management.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span>React.js</span>
+                            <span>FastAPI</span>
+                            <span>OpenAI API</span>
+                            <span>Vercel</span>
+                            <span>Render</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/ishanbhattacharjee12/Next-Word-Predictor" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Next Word Predictor (LSTM)</h3>
+                        <div class="project-description">
+                            <p>A character-level LSTM neural network designed for predictive text modeling, trained to capture temporal linguistic patterns.</p>
+                            <ul>
+                                <li>Trained on a 1,000+ word corpus, achieving <strong>96% validation accuracy</strong>.</li>
+                                <li>Built a robust text preprocessing pipeline with tokenization to transform raw text into model-ready tensors efficiently.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span>PyTorch</span>
+                            <span>NLP</span>
+                            <span>Deep Learning</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="section">
+            <div class="section-container">
+                <h2 class="section-title fade-up">Education & Certifications</h2>
+                <div class="edu-cert-grid fade-up">
+                    
+                    <div class="education-list">
+                        <div class="edu-card glass-card">
+                            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="edu-info">
+                                <h3>B.Tech in Computer Science & Engineering (IoT)</h3>
+                                <h4>Vellore Institute of Technology | Vellore, India</h4>
+                                <span class="edu-date">Expected May 2026</span>
+                                <p class="edu-grade">Cumulative GPA: <strong>8.30/10.0</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="edu-card glass-card">
+                            <div class="edu-icon"><i class="fas fa-school"></i></div>
+                            <div class="edu-info">
+                                <h3>Class XII (CISCE)</h3>
+                                <h4>D.B.M.S. English School | Jamshedpur, India</h4>
+                                <span class="edu-date">2022</span>
+                                <p class="edu-grade">Grade: <strong>92.5%</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certifications-list">
+                        <div class="cert-card glass-card">
+                            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="cert-info">
+                                <h3>Getting Started with Deep Learning</h3>
+                                <h4>NVIDIA</h4>
+                                <span class="cert-date">Sep 2025</span>
+                                <p>Completed 20+ hours of training in PyTorch, Computer Vision, Classification Models, Model Optimization, and GPU Deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p>I'm currently seeking new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <a href="mailto:ishanbhattacharjee19@gmail.com" class="btn btn-primary footer-btn">Say Hello</a>
+            <div class="footer-socials">
+                <a href="https://github.com/ishanbhattacharjee12" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ishan-bhattacharjee" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="tel:7004211716"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="copyright">Designed & Built by Ishan Bhattacharjee</p>
         </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title fade-in">Featured Projects</h2>
-        <div class="projects-grid">
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">Next Word Predictor (LSTM)</h3>
-                <p class="project-tech">PyTorch, NLP, Deep Learning</p>
-                <ul class="project-description">
-                    <li>Implemented a Long Short-Term Memory (LSTM) using PyTorch to predict the next word in a sequence.</li>
-                    <li>Trained on a cleaned English text corpus and achieved 96% prediction accuracy.</li>
-                    <li>Demonstrated the model's ability to capture temporal patterns and generate text-like output.</li>
-                </ul>
-            </div>
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">CNN Fashion MNIST Classifier</h3>
-                <p class="project-tech">PyTorch, CNN, Optuna</p>
-                <ul class="project-description">
-                    <li>Developed a Convolutional Neural Network (CNN) using PyTorch for classifying images from the Fashion-MNIST dataset (60,000 images).</li>
-                    <li>Implemented automated hyperparameter optimization with Optuna.</li>
-                    <li>Achieved 94% accuracy on the test set while reducing training time and improving model accuracy.</li>
-                </ul>
-            </div>
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">ANN Fashion MNIST Classifier</h3>
-                <p class="project-tech">PyTorch, ANN, Optuna</p>
-                <ul class="project-description">
-                    <li>Built and tuned an Artificial Neural Network using PyTorch to classify Fashion-MNIST dataset (60,000 images).</li>
-                    <li>Implemented hyperparameter optimization with Optuna.</li>
-                    <li>Achieved 89% accuracy on the test set.</li>
-                </ul>
-            </div>
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">Sales Insights Analyser</h3>
-                <p class="project-tech">Python, Tableau, Data Analytics</p>
-                <ul class="project-description">
-                    <li>Built an interactive dashboard using Tableau to visualize and analyze regional sales data.</li>
-                    <li>Created multiple charts and filters to provide insights on product category trends and revenue growth.</li>
-                    <li>Enabled stakeholders to make data-driven decisions.</li>
-                </ul>
-            </div>
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">Retail Data Analysis</h3>
-                <p class="project-tech">Python, SQL, Pandas</p>
-                <ul class="project-description">
-                    <li>Performed exploratory data analysis on a retail transaction dataset using NumPy, Pandas, and SQL.</li>
-                    <li>Cleaned and transformed data to uncover patterns in customer purchases.</li>
-                    <li>Identified key trends including ~30% repeat purchases on weekends, enabling data-driven marketing insights.</li>
-                </ul>
-            </div>
-
-            <div class="project-card fade-in">
-                <h3 class="project-title">Interactive Tic Tac Toe Game</h3>
-                <p class="project-tech">HTML, CSS, JavaScript</p>
-                <ul class="project-description">
-                    <li>Designed and built an interactive Tic-Tac-Toe game with a modern UI/UX approach.</li>
-                    <li>Used advanced CSS to create a responsive, glassmorphism-style interface.</li>
-                    <li>Implemented smooth animations and engaging gameplay with JavaScript.</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
