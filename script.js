@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Navbar Scroll Effect
+    // 1. Navbar Scroll Effect (Floating Pill)
     const navbar = document.getElementById('navbar');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 20) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -41,49 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Scroll Reveal Animation (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.fade-up');
+    // 3. Smooth Intersection Observer (Reveal Up)
+    const revealElements = document.querySelectorAll('.reveal-up');
     
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    fadeElements.forEach(el => {
+    revealElements.forEach(el => {
         observer.observe(el);
     });
 
-    // 4. Highlight Active Nav Link on Scroll
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollY = window.scrollY;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
+    // Trigger initial visibility for elements already in viewport
+    setTimeout(() => {
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('visible');
             }
         });
-
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    });
+    }, 100);
 });
