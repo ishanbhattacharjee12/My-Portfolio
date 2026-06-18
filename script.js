@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Navbar Scroll Effect (Floating Pill)
-    const navbar = document.getElementById('navbar');
-    
+    // 1. Scroll Progress Bar
+    const scrollBar = document.getElementById('scroll-bar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if(scrollBar) {
+            scrollBar.style.width = scrolled + "%";
         }
     });
 
@@ -15,35 +15,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = mobileMenuBtn.querySelector('i');
             if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                icon.classList.replace('fa-bars', 'fa-times');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                icon.classList.replace('fa-times', 'fa-bars');
             }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
         });
     }
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+    // 3. Futuristic Mouse Tracking Glow on Cards
+    const cards = document.querySelectorAll('.interactive-card');
+    
+    cards.forEach(card => {
+        const glow = card.querySelector('.card-glow');
+        if(!glow) return;
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            // Calculate mouse position relative to the card
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Move the glow center to the mouse position
+            glow.style.left = `${x}px`;
+            glow.style.top = `${y}px`;
         });
     });
 
-    // 3. Smooth Intersection Observer (Reveal Up)
+    // 4. Smooth Intersection Observer (Reveal Up)
     const revealElements = document.querySelectorAll('.reveal-up');
-    
     const observerOptions = {
         root: null,
         rootMargin: '0px 0px -50px 0px',
@@ -59,11 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    revealElements.forEach(el => {
-        observer.observe(el);
-    });
+    revealElements.forEach(el => observer.observe(el));
 
-    // Trigger initial visibility for elements already in viewport
+    // Trigger initial visibility
     setTimeout(() => {
         revealElements.forEach(el => {
             const rect = el.getBoundingClientRect();
