@@ -10,11 +10,11 @@
     --bg-panel: rgba(15, 15, 20, 0.6);
     --bg-panel-hover: rgba(25, 25, 35, 0.8);
     
-    /* Neon Cyber Palette */
-    --neon-cyan: #00f3ff;
-    --neon-pink: #ff007a;
-    --neon-purple: #8a2be2;
-    --neon-green: #00ff66;
+    /* Cyber Palette - Ochre & Light Blue */
+    --neon-cyan: #89cff0; /* Light bluish */
+    --neon-pink: #dcae1d; /* Ochre yellow */
+    --neon-purple: #b8860b; /* Dark goldenrod / dark ochre */
+    --neon-green: #add8e6; /* Light blue */
     
     /* Typography Colors */
     --text-primary: #ffffff;
